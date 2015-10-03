@@ -39,6 +39,7 @@ _putc:                          ! putc(char c): print a char
             mov   bp, sp
             movb  al, 4[bp]     ! al = char
             movb  ah, #14
+            mov   bx, #0x000C   ! red colour
             int   0x10
             pop   bp
             ret
